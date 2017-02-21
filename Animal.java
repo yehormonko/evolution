@@ -40,9 +40,14 @@ public class Animal extends Card {
         for(int j=0;j<PropertyList.size();j++){
             if ((!(PropertyList.get(j) instanceof Big)) && (animal.serchBig())) {
                ret= false;
+
                 break;
-            }else { ret = true;}
+            }else {
+                ret = true;
+                Owner.removeAnimal(animal);
+                Food=Food+2;}
             }
+
        return ret;
 
     }
@@ -53,5 +58,11 @@ public class Animal extends Card {
     }
     public boolean isBig(){
 return false;
+    }
+    public void clearOwner(){
+        Owner = null;
+    }
+    public Player getOwner(){
+        return Owner;
     }
 }

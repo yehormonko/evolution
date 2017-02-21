@@ -7,6 +7,9 @@ public class Main {
             Player me = new Player();
             Animal a = new Animal(me);
             Animal b = new Animal(me);
+            Player you =  new Player();
+            Animal c = new Animal(you);
+            you.removeAnimal(c);
             Big m = new Big();
            b.addProperty(m);
             a.addProperty(m);
@@ -14,6 +17,8 @@ public class Main {
             me.addAnimal(b);
 
           System.out.println(a.attack(b));
+            a.attack(b);
+            System.out.println(a.getOwner());
 
         }
     }
