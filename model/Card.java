@@ -1,3 +1,5 @@
+package model;
+
 /**
  * Created by Monko on 15.02.2017.
  */

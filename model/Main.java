@@ -1,3 +1,7 @@
+package model;
+
+import model.properties.Big;
+
 /**
  * Created by Monko on 16.02.2017.
  */
@@ -10,15 +14,12 @@ public class Main {
             Player you =  new Player();
             Animal c = new Animal(you);
             you.removeAnimal(c);
-            Big m = new Big();
-           b.addProperty(m);
-            a.addProperty(m);
-            me.addAnimal(a);
-            me.addAnimal(b);
+            a.addProperty(new Big());
+            b.addProperty(new Big());
+            System.out.println(b.getFood());
+            System.out.println(a.attackedBy(b));
+            System.out.println(b.getFood());
 
-          System.out.println(a.attack(b));
-            a.attack(b);
-            System.out.println(a.getOwner());
 
         }
     }
