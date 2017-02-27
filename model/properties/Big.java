@@ -16,6 +16,7 @@ public class Big extends SingleProperty {
       for (SingleProperty property : hunter.getPropertyList()) {
           if (property instanceof Big)
               return true;
+
           } return false;
   }
 
