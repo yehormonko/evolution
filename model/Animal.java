@@ -10,6 +10,7 @@ public class Animal extends Card {
     public Animal(Player owner){
         PropertyList = new ArrayList<>();
        Owner=owner;
+        NeedFood = 1;
 
     }
 
@@ -56,5 +57,11 @@ return false;
     }
     public int getFood(){
         return Food;
+    }
+    public int getNeedFood(){
+        return NeedFood;
+    }
+    public void removeProperty(SingleProperty property){
+        PropertyList.remove(property);
     }
 }

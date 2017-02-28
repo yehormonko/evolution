@@ -2,6 +2,7 @@ package model;
 
 import model.properties.Big;
 import model.properties.Camouflage;
+import model.properties.Hibernation;
 import model.properties.Sharp;
 
 /**
@@ -21,12 +22,16 @@ public class Main {
             System.out.println(b.getFood());
             System.out.println(a.attackedBy(b));
             System.out.println(b.getFood());
-            Animal d = new Animal(me);
-            Animal f = new Animal(me);
-            d.addProperty(new Sharp());
-            f.addProperty(new Camouflage());
-            System.out.println(f.attackedBy(a));
+            System.out.println(b.getNeedFood());
+            Animal f =new Animal(me);
+            Animal s = new Animal(me);
+           f.addProperty(new Hibernation());
+            Animal r = new Animal(me);
+            r.attackedBy(f);
+            System.out.println(f.getNeedFood());
+            System.out.println(f.getFood());
 
+            System.out.println(f.attackedBy(s));
         }
     }
 
